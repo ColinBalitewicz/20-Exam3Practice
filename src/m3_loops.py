@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Colin Balitewicz.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -138,6 +138,12 @@ def run_test_practice_problem3():
 
 
 def practice_problem3(start, n, threshold):
+    list=[]
+    for k in range(start,start+n):
+        if math.sin(k)+math.cos(k)>threshold:
+            list=list+[k]
+    return list
+
     """
     What comes in:
       -- An integer:  start
