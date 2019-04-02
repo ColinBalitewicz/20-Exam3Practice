@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Colin Balitewicz.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -56,6 +56,16 @@ def run_test_shape():
 
 
 def shape(r):
+    for j in range(r):
+        for x in range(j):
+            print(' ',end='')
+        for k in range(r-j):
+            print('+',end='')
+        for i in range(1):
+            print('!',end='')
+        for f in range(r-j,0,-1):
+            print(f,end='')
+        print()
     """
     Prints a shape with r rows that looks like this example where r=7:
     +++++++!7654321
@@ -76,7 +86,7 @@ def shape(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     ###########################################################################
