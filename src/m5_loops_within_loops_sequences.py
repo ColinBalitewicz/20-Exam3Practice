@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Colin Balitewicz.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -72,8 +72,15 @@ def run_test_integers():
     print('Expected is:', expected)
     print('Actual is:  ', answer)
 
+    print('expected and actual are',[1,2,3,4],integers([('red',1,'hot'),('chili',2,'pepper'),(3,'is','best'),(4,'stand')]))
 
 def integers(sequence_of_sequences):
+    new_list=[]
+    for j in range(len(sequence_of_sequences)):
+        for k in range(len(sequence_of_sequences[j])):
+           if type(sequence_of_sequences[j][k])==int:
+               new_list=new_list+[sequence_of_sequences[j][k]]
+    return new_list
     """
     Returns a new list that contains all the integers
     in the subsequences of the given sequence, in the order that they
@@ -162,6 +169,14 @@ def run_test_big_letters():
 
 
 def big_letters(sequence_of_sequences):
+    new_string=''
+    for j in range(len(sequence_of_sequences)):
+        for k in range(len(sequence_of_sequences[j])):
+            if type(sequence_of_sequences[j])==str:
+                if sequence_of_sequences[j][k].isupper():
+                    new_string=new_string+str(sequence_of_sequences[j][k])
+    return new_string
+
     """
     Returns a new STRING that contains all the upper-case letters
     in the subsequences of the given sequence that are strings,
